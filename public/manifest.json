@@ -1,0 +1,17 @@
+{
+  "name": "D8 Capital — Islamic Financing Marketplace",
+  "short_name": "D8 Capital",
+  "description": "Digital Shariah-compliant financing marketplace for Malaysia, Türkiye, and Azerbaijan",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#064e3b",
+  "theme_color": "#064e3b",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

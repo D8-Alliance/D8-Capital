@@ -1,0 +1,6 @@
+{
+  "name": "D8 Capital — Digital Islamic Financing Marketplace",
+  "description": "Standalone Shariah-compliant digital financing marketplace PWA connecting financing seekers with participating Islamic financial institutions in Malaysia, Türkiye, and Azerbaijan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

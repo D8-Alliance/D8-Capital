@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #090909;
+    --bg-card: #111111;
+    --bg-card-alt: #0d0d0d;
+    --border-subtle: rgba(255, 255, 255, 0.07);
+    --border-gold: rgba(196, 166, 126, 0.3);
+    --gold: #c4a67e;
+    --gold-dark: #8e7a5d;
+    --text-primary: #e5e5e5;
+    --text-muted: rgba(255, 255, 255, 0.4);
+  }
+
+  body {
+    background-color: #090909;
+    color: #e5e5e5;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, .font-serif-luxury {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-brand-cinzel {
+    font-family: 'Cinzel', Georgia, serif;
+  }
+
+  /* Custom subtle dark scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #090909;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #262626;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #383838;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
