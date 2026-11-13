@@ -5,7 +5,7 @@ import { PROVIDERS } from '../data/providers';
 import { formatCurrency, formatProfitRate, calculateFinancing } from '../services/calculator';
 import { DemoDataLabel } from './DemoDataLabel';
 import { PdsModal } from './PdsModal';
-import { ChevronDown, ChevronUp, FileText, ArrowRight, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { ChevronDown, ChevronUp, FileText, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 interface ComparisonTableProps {
   products: FinancingProduct[];
@@ -184,7 +184,7 @@ export const ComparisonTable: React.FC<ComparisonTableProps> = ({
                         <td colSpan={6} className="p-5">
                           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
                             <div className="bg-white p-3.5 rounded-2xl border border-slate-200">
-                              <span className="font-bold text-slate-900 uppercase text-[10px] tracking-wider block mb-2 text-emerald-950">
+                              <span className="font-bold uppercase text-[10px] tracking-wider block mb-2 text-emerald-950">
                                 {t('catalogue.features')}
                               </span>
                               <ul className="space-y-1.5 text-slate-600">
@@ -198,7 +198,7 @@ export const ComparisonTable: React.FC<ComparisonTableProps> = ({
                             </div>
 
                             <div className="bg-white p-3.5 rounded-2xl border border-slate-200">
-                              <span className="font-bold text-slate-900 uppercase text-[10px] tracking-wider block mb-2 text-emerald-950">
+                              <span className="font-bold uppercase text-[10px] tracking-wider block mb-2 text-emerald-950">
                                 {t('catalogue.eligibility')}
                               </span>
                               <p className="text-slate-600 leading-relaxed">{product.eligibilitySummary}</p>
@@ -208,7 +208,7 @@ export const ComparisonTable: React.FC<ComparisonTableProps> = ({
                             </div>
 
                             <div className="bg-white p-3.5 rounded-2xl border border-slate-200">
-                              <span className="font-bold text-slate-900 uppercase text-[10px] tracking-wider block mb-2 text-emerald-950">
+                              <span className="font-bold uppercase text-[10px] tracking-wider block mb-2 text-emerald-950">
                                 {t('catalogue.documentsRequired')}
                               </span>
                               <ul className="space-y-1 text-slate-600 list-disc pl-4">

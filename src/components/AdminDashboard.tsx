@@ -13,8 +13,6 @@ import {
   Package,
   FileText,
   Activity,
-  ArrowRight,
-  TrendingUp,
 } from 'lucide-react';
 
 interface AdminDashboardProps {
@@ -24,7 +22,6 @@ interface AdminDashboardProps {
 export const AdminDashboard: React.FC<AdminDashboardProps> = ({ onNavigateTab }) => {
   const { state } = useDemoStore();
 
-  const totalApps = state.applications.length;
   const totalProducts = PRODUCTS.length;
   const totalProviders = PROVIDERS.length;
   const totalAuditLogs = state.auditLogs.length;
@@ -32,7 +29,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ onNavigateTab })
   return (
     <div id="admin-dashboard" className="space-y-8 animate-fadeIn pb-24">
       {/* Admin Hero Header */}
-      <div className="bg-gradient-to-br from-slate-900 via-purple-950 to-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-xl border border-purple-900/40 space-y-4">
+      <div className="bg-linear-to-br from-slate-900 via-purple-950 to-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-xl border border-purple-900/40 space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-3">
             <div className="p-3 rounded-2xl bg-purple-600 text-white shadow-md">

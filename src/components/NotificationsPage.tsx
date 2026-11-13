@@ -5,9 +5,7 @@ import { DemoDataLabel } from './DemoDataLabel';
 import {
   Bell,
   CheckCircle2,
-  AlertCircle,
   Sparkles,
-  Clock,
   ArrowRight,
 } from 'lucide-react';
 

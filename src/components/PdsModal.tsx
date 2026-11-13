@@ -62,7 +62,7 @@ export const PdsModal: React.FC<PdsModalProps> = ({ product, isOpen, onClose }) 
         <div className="p-6 overflow-y-auto space-y-6 text-sm text-slate-700">
           {/* Section 1 */}
           <div className="border border-slate-200 rounded-2xl p-4 bg-slate-50/50">
-            <h4 className="font-bold text-slate-900 mb-2 flex items-center gap-2 text-xs uppercase tracking-wider text-emerald-950">
+            <h4 className="font-bold mb-2 flex items-center gap-2 text-xs uppercase tracking-wider text-emerald-950">
               <span className="w-5 h-5 rounded-full bg-emerald-900 text-white flex items-center justify-center text-[10px]">1</span>
               What is this product about?
             </h4>
@@ -73,7 +73,7 @@ export const PdsModal: React.FC<PdsModalProps> = ({ product, isOpen, onClose }) 
 
           {/* Section 2 */}
           <div className="border border-slate-200 rounded-2xl p-4 bg-slate-50/50">
-            <h4 className="font-bold text-slate-900 mb-2 flex items-center gap-2 text-xs uppercase tracking-wider text-emerald-950">
+            <h4 className="font-bold mb-2 flex items-center gap-2 text-xs uppercase tracking-wider text-emerald-950">
               <span className="w-5 h-5 rounded-full bg-emerald-900 text-white flex items-center justify-center text-[10px]">2</span>
               What is the Shariah concept applicable?
             </h4>
@@ -84,7 +84,7 @@ export const PdsModal: React.FC<PdsModalProps> = ({ product, isOpen, onClose }) 
 
           {/* Section 3: Key Financial Terms */}
           <div className="border border-slate-200 rounded-2xl p-4 bg-slate-50/50">
-            <h4 className="font-bold text-slate-900 mb-3 flex items-center gap-2 text-xs uppercase tracking-wider text-emerald-950">
+            <h4 className="font-bold mb-3 flex items-center gap-2 text-xs uppercase tracking-wider text-emerald-950">
               <span className="w-5 h-5 rounded-full bg-emerald-900 text-white flex items-center justify-center text-[10px]">3</span>
               What do I get from this product?
             </h4>
@@ -128,7 +128,7 @@ export const PdsModal: React.FC<PdsModalProps> = ({ product, isOpen, onClose }) 
 
           {/* Section 4: Fees & Charges */}
           <div className="border border-slate-200 rounded-2xl p-4 bg-slate-50/50">
-            <h4 className="font-bold text-slate-900 mb-2 flex items-center gap-2 text-xs uppercase tracking-wider text-emerald-950">
+            <h4 className="font-bold mb-2 flex items-center gap-2 text-xs uppercase tracking-wider text-emerald-950">
               <span className="w-5 h-5 rounded-full bg-emerald-900 text-white flex items-center justify-center text-[10px]">4</span>
               What are the fees and charges I have to pay?
             </h4>
@@ -140,7 +140,7 @@ export const PdsModal: React.FC<PdsModalProps> = ({ product, isOpen, onClose }) 
           </div>
 
           {/* Section 5: Early Settlement & Ibra */}
-          <div className="border border-slate-200 rounded-2xl p-4 bg-emerald-50/60 border-emerald-200">
+          <div className="border rounded-2xl p-4 bg-emerald-50/60 border-emerald-200">
             <h4 className="font-bold text-emerald-950 mb-2 flex items-center gap-2 text-xs uppercase tracking-wider">
               <span className="w-5 h-5 rounded-full bg-emerald-700 text-white flex items-center justify-center text-[10px]">5</span>
                   {isTakaful ? 'Certificate Termination & Benefits' : 'What if I fully settle before maturity (Ibra\')?'}
@@ -151,7 +151,7 @@ export const PdsModal: React.FC<PdsModalProps> = ({ product, isOpen, onClose }) 
           </div>
 
           {/* Section 6: Late Payment Ta'widh */}
-          <div className="border border-slate-200 rounded-2xl p-4 bg-rose-50/60 border-rose-200">
+          <div className="border rounded-2xl p-4 bg-rose-50/60 border-rose-200">
             <h4 className="font-bold text-rose-950 mb-2 flex items-center gap-2 text-xs uppercase tracking-wider">
               <span className="w-5 h-5 rounded-full bg-rose-700 text-white flex items-center justify-center text-[10px]">6</span>
               What if I fail to fulfill my obligations?

@@ -13,7 +13,6 @@ import {
   CheckCircle2,
   XCircle,
   ArrowRight,
-  TrendingUp,
 } from 'lucide-react';
 
 interface EligibilityPageProps {

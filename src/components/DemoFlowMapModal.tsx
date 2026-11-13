@@ -1,16 +1,10 @@
 import React from 'react';
 import { useDemoStore } from '../store/DemoStore';
 import { useI18n } from '../i18n';
-import { DemoScenarioId, DemoRole } from '../types';
+import { DemoRole } from '../types';
 import {
   X,
-  Play,
-  CheckCircle2,
-  ArrowRight,
   Sparkles,
-  ShieldCheck,
-  User,
-  Building2,
   ChevronRight,
 } from 'lucide-react';
 
@@ -213,7 +207,7 @@ export const DemoFlowMapModal: React.FC<DemoFlowMapModalProps> = ({
               </span>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 max-h-[380px] overflow-y-auto p-1">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 max-h-95 overflow-y-auto p-1">
               {STEPS_22.map((s) => (
                 <div
                   key={s.step}

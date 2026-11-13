@@ -17,10 +17,8 @@ import {
   Calculator as CalcIcon,
   Percent,
   Calendar,
-  Layers,
   ArrowRight,
   ShieldCheck,
-  Info,
   Table as TableIcon,
 } from 'lucide-react';
 
@@ -328,7 +326,7 @@ export const CalculatorPage: React.FC<CalculatorPageProps> = ({ onProceedToApply
 
         {/* Right Output Bento Card */}
         <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
-          <div className="bg-gradient-to-br from-slate-900 via-emerald-950 to-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-xl space-y-6">
+          <div className="bg-linear-to-br from-slate-900 via-emerald-950 to-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-xl space-y-6">
             <div className="flex items-center justify-between pb-4 border-b border-white/10">
               <span className="text-[10px] uppercase font-bold text-emerald-400 tracking-wider">
                 Estimated Output

@@ -20,7 +20,6 @@ interface FinancingCardProps {
 export const FinancingCard: React.FC<FinancingCardProps> = ({
   product,
   onApply,
-  onViewDetails,
   sampleAmount,
   sampleTenureYears,
 }) => {
@@ -55,7 +54,7 @@ export const FinancingCard: React.FC<FinancingCardProps> = ({
             loading="lazy"
             className="h-full w-full object-cover transition duration-500 hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-white via-white/20 to-transparent" />
           <span className="absolute bottom-3 left-4 rounded-full border border-white/20 bg-black/45 px-2.5 py-1 text-[10px] font-mono font-bold uppercase tracking-wider text-white backdrop-blur-sm">
             {isTakaful ? 'Takaful Protection' : product.category}
           </span>

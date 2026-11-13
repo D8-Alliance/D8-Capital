@@ -14,11 +14,7 @@ import {
   ShieldCheck,
   FileCheck2,
   CheckCircle2,
-  XCircle,
-  Building2,
   User,
-  Clock,
-  Download,
   FileText,
 } from 'lucide-react';
 
@@ -34,7 +30,7 @@ export const ApplicationDetailPage: React.FC<ApplicationDetailPageProps> = ({
   onViewActiveFinancing,
 }) => {
   const { state, acceptOffer, declineOffer } = useDemoStore();
-  const { t, locale } = useI18n();
+  const { locale } = useI18n();
   const [isProcessing, setIsProcessing] = useState(false);
 
   // Get freshest app state from store
@@ -92,7 +88,7 @@ export const ApplicationDetailPage: React.FC<ApplicationDetailPageProps> = ({
           <div className="flex flex-col items-start sm:items-end gap-2">
             <StatusBadge status={currentApp.status} size="lg" />
             <span className="text-[11px] text-slate-400 font-mono">
-              Submitted: {new Date(currentApp.submittedAt).toLocaleDateString()}
+              Submitted: {new Date(currentApp.createdAt).toLocaleDateString()}
             </span>
           </div>
         </div>
@@ -113,7 +109,7 @@ export const ApplicationDetailPage: React.FC<ApplicationDetailPageProps> = ({
       {isOfferIssued && currentApp.offer && (
         <div
           id="shariah-offer-banner"
-          className="bg-gradient-to-br from-emerald-950 via-slate-900 to-emerald-900 text-white rounded-3xl p-6 sm:p-8 shadow-2xl border-2 border-amber-400/80 space-y-6 animate-fadeIn"
+          className="bg-linear-to-br from-emerald-950 via-slate-900 to-emerald-900 text-white rounded-3xl p-6 sm:p-8 shadow-2xl border-2 border-amber-400/80 space-y-6 animate-fadeIn"
         >
           <div className="flex items-center justify-between pb-4 border-b border-white/10">
             <div className="flex items-center gap-3">
@@ -140,7 +136,7 @@ export const ApplicationDetailPage: React.FC<ApplicationDetailPageProps> = ({
             <div className="p-3.5 bg-white/5 rounded-2xl border border-white/10">
               <span className="text-[10px] text-slate-400 uppercase font-bold block">Approved Amount</span>
               <span className="text-lg font-extrabold text-white font-mono mt-0.5 block">
-                {formatCurrency(currentApp.offer.approvedAmount, currentApp.country, locale)}
+                {formatCurrency(currentApp.offer.offeredAmount, currentApp.country, locale)}
               </span>
             </div>
 
@@ -161,7 +157,7 @@ export const ApplicationDetailPage: React.FC<ApplicationDetailPageProps> = ({
             <div className="p-3.5 bg-white/5 rounded-2xl border border-white/10">
               <span className="text-[10px] text-slate-400 uppercase font-bold block">Approved Tenure</span>
               <span className="text-lg font-extrabold text-white mt-0.5 block">
-                {currentApp.offer.approvedTenureYears} Years
+                {currentApp.offer.tenureYears} Years
               </span>
             </div>
           </div>
@@ -173,7 +169,7 @@ export const ApplicationDetailPage: React.FC<ApplicationDetailPageProps> = ({
               <span>Offer Conditions & Shariah Governance Guarantee</span>
             </div>
             <p className="text-[11px] leading-relaxed">
-              {currentApp.offer.specialConditions} This facility operates strictly under the approved{' '}
+              {currentApp.offer.termsAndConditions[0]} This facility operates strictly under the approved{' '}
               <strong>{currentApp.shariahStructure}</strong> master agreement.
             </p>
           </div>
@@ -249,21 +245,21 @@ export const ApplicationDetailPage: React.FC<ApplicationDetailPageProps> = ({
           <div className="space-y-2 text-xs">
             <div className="flex justify-between py-1.5 border-b border-slate-100">
               <span className="text-slate-500">Legal Name</span>
-              <span className="font-semibold text-slate-900">{currentApp.applicantName}</span>
+              <span className="font-semibold text-slate-900">{currentApp.applicantKyc?.fullName || currentApp.userName}</span>
             </div>
             <div className="flex justify-between py-1.5 border-b border-slate-100">
               <span className="text-slate-500">Identification</span>
-              <span className="font-mono font-semibold text-slate-900">{currentApp.applicantIdNumber}</span>
+              <span className="font-mono font-semibold text-slate-900">{currentApp.applicantKyc?.idNumber}</span>
             </div>
             <div className="flex justify-between py-1.5 border-b border-slate-100">
               <span className="text-slate-500">Declared Monthly Income</span>
               <span className="font-mono font-bold text-slate-900">
-                {formatCurrency(currentApp.monthlyIncome, currentApp.country, locale)}
+                {formatCurrency(currentApp.applicantKyc?.monthlyIncome || 0, currentApp.country, locale)}
               </span>
             </div>
             <div className="flex justify-between py-1.5 border-b border-slate-100">
               <span className="text-slate-500">Purpose of Financing</span>
-              <span className="font-semibold text-slate-900">{currentApp.financingPurpose}</span>
+              <span className="font-semibold text-slate-900">{currentApp.purpose}</span>
             </div>
           </div>
         </div>

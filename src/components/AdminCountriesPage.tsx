@@ -1,7 +1,7 @@
 import React from 'react';
 import { COUNTRIES_LIST } from '../data/countries';
 import { DemoDataLabel } from './DemoDataLabel';
-import { Globe2, ShieldCheck, Check, Settings2 } from 'lucide-react';
+import { Check } from 'lucide-react';
 
 export const AdminCountriesPage: React.FC = () => {
   return (
@@ -80,7 +80,7 @@ export const AdminCountriesPage: React.FC = () => {
                 <Check className="w-3.5 h-3.5" />
                 Active Jurisdiction
               </span>
-              <span className="font-mono text-slate-400">Max DSR: {(country.maxDsr * 100).toFixed(0)}%</span>
+              <span className="font-mono text-slate-400">Max DSR: {((country.maxDsr ?? 0.6) * 100).toFixed(0)}%</span>
             </div>
           </div>
         ))}

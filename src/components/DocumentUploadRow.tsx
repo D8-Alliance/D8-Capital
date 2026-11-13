@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { ApplicationDocument } from '../types';
-import { useI18n } from '../i18n';
-import { UploadCloud, CheckCircle2, FileText, AlertTriangle, Trash2 } from 'lucide-react';
+import { UploadCloud, CheckCircle2, FileText, Trash2 } from 'lucide-react';
 
 interface DocumentUploadRowProps {
   documentName: string;
@@ -20,7 +19,6 @@ export const DocumentUploadRow: React.FC<DocumentUploadRowProps> = ({
   onUpload,
   onRemove,
 }) => {
-  const { t } = useI18n();
   const [isDragging, setIsDragging] = useState(false);
   const [isSimulatingUpload, setIsSimulatingUpload] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);

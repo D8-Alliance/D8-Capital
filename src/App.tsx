@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { DemoStoreProvider, useDemoStore } from './store/DemoStore';
 import { I18nProvider } from './i18n';
 import { FinancingProduct, FinancingApplication, DemoRole } from './types';
@@ -84,7 +84,7 @@ function MainAppContent() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleStepJump = (stepNumber: number, targetTab: string, role?: DemoRole) => {
+  const handleStepJump = (_stepNumber: number, targetTab: string, role?: DemoRole) => {
     if (role && role !== state.activeRole) {
       setRole(role);
     }

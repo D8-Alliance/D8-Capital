@@ -12,7 +12,6 @@ import { DocumentUploadRow } from './DocumentUploadRow';
 import { DemoDataLabel } from './DemoDataLabel';
 import { RegulatoryDisclaimer } from './RegulatoryDisclaimer';
 import {
-  CheckCircle2,
   ArrowRight,
   ArrowLeft,
   UploadCloud,
@@ -21,7 +20,6 @@ import {
   Building,
   User,
   Sparkles,
-  AlertCircle,
 } from 'lucide-react';
 
 interface ApplicationWizardProps {
@@ -40,7 +38,7 @@ export const ApplicationWizard: React.FC<ApplicationWizardProps> = ({
   onCancel,
 }) => {
   const { state, createApplication } = useDemoStore();
-  const { t, locale } = useI18n();
+  const { locale } = useI18n();
 
   const countryConfig = COUNTRIES[state.activeCountry] || COUNTRIES.MY;
   const countryProducts = PRODUCTS.filter((p) => p.country === state.activeCountry);

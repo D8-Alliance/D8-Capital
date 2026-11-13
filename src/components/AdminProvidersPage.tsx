@@ -2,7 +2,7 @@ import React from 'react';
 import { PROVIDERS } from '../data/providers';
 import { CountryFlagBadge } from './CountryFlagBadge';
 import { DemoDataLabel } from './DemoDataLabel';
-import { Building2, ShieldCheck, Check } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
 
 export const AdminProvidersPage: React.FC = () => {
   return (

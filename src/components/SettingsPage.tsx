@@ -5,15 +5,10 @@ import { COUNTRIES } from '../data/countries';
 import { DemoDataLabel } from './DemoDataLabel';
 import { RegulatoryDisclaimer } from './RegulatoryDisclaimer';
 import {
-  SlidersHorizontal,
   User,
   Globe2,
   RotateCcw,
-  Layers,
   Sparkles,
-  ShieldCheck,
-  Building2,
-  ExternalLink,
 } from 'lucide-react';
 
 export const SettingsPage: React.FC = () => {
@@ -105,7 +100,7 @@ export const SettingsPage: React.FC = () => {
       {/* Mandatory Static "Future D8 SuperApp Integration" (HC-1 & Section 16) */}
       <div
         id="future-superapp-integration-section"
-        className="bg-gradient-to-br from-emerald-950 via-slate-900 to-emerald-900 text-white rounded-3xl p-6 sm:p-8 shadow-xl space-y-4 border border-emerald-800/60"
+        className="bg-linear-to-br from-emerald-950 via-slate-900 to-emerald-900 text-white rounded-3xl p-6 sm:p-8 shadow-xl space-y-4 border border-emerald-800/60"
       >
         <div className="flex items-center gap-3">
           <div className="p-2.5 rounded-2xl bg-amber-400/20 text-amber-300">

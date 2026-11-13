@@ -1,7 +1,6 @@
 import React from 'react';
 import { useDemoStore } from '../store/DemoStore';
 import { DemoDataLabel } from './DemoDataLabel';
-import { Activity, ShieldCheck, Filter } from 'lucide-react';
 
 export const AdminAuditLogsPage: React.FC = () => {
   const { state } = useDemoStore();

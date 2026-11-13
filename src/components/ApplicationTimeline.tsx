@@ -1,7 +1,7 @@
 import React from 'react';
 import { ApplicationStatus } from '../types';
 import { useI18n } from '../i18n';
-import { Check, Clock, Sparkles, AlertCircle, Wallet } from 'lucide-react';
+import { Check, Clock, Sparkles, AlertCircle } from 'lucide-react';
 
 interface ApplicationTimelineProps {
   currentStatus: ApplicationStatus;
@@ -100,7 +100,7 @@ export const ApplicationTimeline: React.FC<ApplicationTimelineProps> = ({
                 )}
               </div>
 
-              <div className="mt-2 text-center max-w-[90px] sm:max-w-[110px]">
+              <div className="mt-2 text-center max-w-22.5 sm:max-w-27.5">
                 <p
                   className={`text-[11px] sm:text-xs font-semibold leading-tight ${
                     isCurrent

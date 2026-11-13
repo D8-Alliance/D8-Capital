@@ -3,7 +3,7 @@ import { useDemoStore } from '../store/DemoStore';
 import { COUNTRIES } from '../data/countries';
 import { formatCurrency } from '../services/calculator';
 import { DemoDataLabel } from './DemoDataLabel';
-import { BarChart3, TrendingUp, ShieldCheck, Download } from 'lucide-react';
+import { ShieldCheck, Download } from 'lucide-react';
 
 export const ProviderReportsPage: React.FC = () => {
   const { state } = useDemoStore();

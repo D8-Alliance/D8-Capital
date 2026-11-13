@@ -11,9 +11,6 @@ import {
   CheckCircle2,
   Clock,
   ShieldCheck,
-  TrendingDown,
-  FileDown,
-  ArrowRight,
   Sparkles,
 } from 'lucide-react';
 
@@ -112,7 +109,7 @@ export const MyFinancingPage: React.FC<MyFinancingPageProps> = ({ onExploreNewFi
       </div>
 
       {/* Main Facility Overview Card */}
-      <div className="bg-gradient-to-br from-slate-900 via-emerald-950 to-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-xl space-y-6">
+      <div className="bg-linear-to-br from-slate-900 via-emerald-950 to-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-xl space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-white/10">
           <div>
             <span className="text-[10px] uppercase font-bold text-emerald-400 tracking-wider block">

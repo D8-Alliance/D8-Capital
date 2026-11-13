@@ -4,7 +4,7 @@ import { PROVIDERS } from '../data/providers';
 import { DemoDataLabel } from './DemoDataLabel';
 import { CountryFlagBadge } from './CountryFlagBadge';
 import { formatProfitRate } from '../services/calculator';
-import { Package, ShieldCheck, Star } from 'lucide-react';
+import { Star } from 'lucide-react';
 
 export const AdminProductsPage: React.FC = () => {
   return (

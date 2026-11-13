@@ -36,7 +36,7 @@ export const BottomNav: React.FC<BottomNavProps> = ({ activeTab, onNavigate }) =
               }`}
             >
               <Icon className={`w-4 h-4 ${isActive ? 'stroke-[2.5px]' : 'stroke-2'}`} />
-              <span className="text-[10px] tracking-tight mt-0.5 truncate max-w-[60px]">
+              <span className="text-[10px] tracking-tight mt-0.5 truncate max-w-15">
                 {item.label}
               </span>
             </button>

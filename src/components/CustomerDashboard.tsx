@@ -14,12 +14,10 @@ import {
   ArrowRight,
   Calculator,
   Search,
-  CheckCircle2,
   FileText,
   Sparkles,
   ShieldCheck,
   TrendingUp,
-  Clock,
   Layers,
   ChevronRight,
 } from 'lucide-react';
@@ -46,7 +44,7 @@ export const CustomerDashboard: React.FC<CustomerDashboardProps> = ({
   return (
     <div id="customer-dashboard" className="space-y-8 animate-fadeIn pb-16">
       {/* Hero Welcome Banner */}
-      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-emerald-950 via-slate-900 to-emerald-900 text-white p-6 sm:p-10 shadow-xl border border-emerald-900/40">
+      <div className="relative overflow-hidden rounded-3xl bg-linear-to-br from-emerald-950 via-slate-900 to-emerald-900 text-white p-6 sm:p-10 shadow-xl border border-emerald-900/40">
         <div className="absolute -right-12 -bottom-12 w-64 h-64 bg-emerald-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
         <div className="relative z-10 max-w-3xl space-y-4">
@@ -101,7 +99,7 @@ export const CustomerDashboard: React.FC<CustomerDashboardProps> = ({
           id="active-app-banner"
           className={`p-6 rounded-3xl border transition shadow-sm ${
             latestApp.status === 'OFFER_ISSUED'
-              ? 'bg-gradient-to-r from-emerald-50 via-amber-50/50 to-emerald-50 border-emerald-400 ring-2 ring-emerald-400/40'
+              ? 'bg-linear-to-r from-emerald-50 via-amber-50/50 to-emerald-50 border-emerald-400 ring-2 ring-emerald-400/40'
               : 'bg-white border-slate-200'
           }`}
         >

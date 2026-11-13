@@ -7,17 +7,13 @@ import { CountryFlagBadge } from './CountryFlagBadge';
 import { CurrencyInput } from './CurrencyInput';
 import { DemoDataLabel } from './DemoDataLabel';
 import { RegulatoryDisclaimer } from './RegulatoryDisclaimer';
-import { calculateFinancing, formatCurrency, formatProfitRate } from '../services/calculator';
+import { calculateFinancing, formatCurrency } from '../services/calculator';
 import {
   ArrowLeft,
   Sparkles,
   ShieldCheck,
-  CheckCircle2,
   AlertCircle,
   FileText,
-  User,
-  Building,
-  TrendingUp,
   FileCheck,
 } from 'lucide-react';
 
@@ -33,7 +29,7 @@ export const ProviderApplicationReview: React.FC<ProviderApplicationReviewProps>
   onOfferIssued,
 }) => {
   const { state, issueOffer, updateApplicationStatus } = useDemoStore();
-  const { t, locale } = useI18n();
+  const { locale } = useI18n();
 
   const currentApp = state.applications.find((a) => a.id === application.id) || application;
 
@@ -41,7 +37,7 @@ export const ProviderApplicationReview: React.FC<ProviderApplicationReviewProps>
   const [approvedAmount, setApprovedAmount] = useState<number>(currentApp.requestedAmount);
   const [approvedRate, setApprovedRate] = useState<number>(currentApp.estimatedProfitRate || 0.045);
   const [approvedTenure, setApprovedTenure] = useState<number>(currentApp.requestedTenureYears);
-  const [validityDays, setValidityDays] = useState<number>(14);
+  const [validityDays] = useState<number>(14);
   const [specialConditions, setSpecialConditions] = useState<string>(
     'Subject to execution of standard Tawarruq commodity sale agency agreement and salary auto-debit assignment.'
   );
@@ -177,7 +173,7 @@ export const ProviderApplicationReview: React.FC<ProviderApplicationReviewProps>
 
           <div className="p-3.5 bg-slate-50 rounded-2xl border border-slate-200">
             <span className="text-[10px] uppercase font-bold text-slate-400 block">Shariah Compliance</span>
-            <span className="text-xs font-bold text-emerald-800 mt-1 block flex items-center gap-1">
+            <span className="text-xs font-bold text-emerald-800 mt-1 flex items-center gap-1">
               <ShieldCheck className="w-4 h-4 text-emerald-600" />
               Verified Structure
             </span>
@@ -213,7 +209,7 @@ export const ProviderApplicationReview: React.FC<ProviderApplicationReviewProps>
       </div>
 
       {/* FORM: Issue Shariah Financing Offer (STEP 18) */}
-      <div className="bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-xl space-y-6">
+      <div className="bg-linear-to-br from-slate-900 via-blue-950 to-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-xl space-y-6">
         <div className="flex items-center gap-3 pb-4 border-b border-white/10">
           <div className="p-2.5 rounded-2xl bg-amber-400 text-slate-950">
             <Sparkles className="w-6 h-6" />

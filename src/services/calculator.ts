@@ -83,7 +83,6 @@ export function calculateFinancing(
   const schedulePreview = [];
   let remaining = safePrincipal;
   const avgMonthlyProfit = totalProfit / tenureMonths;
-  const avgMonthlyPrincipal = safePrincipal / tenureMonths;
 
   for (let m = 1; m <= Math.min(6, tenureMonths); m++) {
     const profitPortion = rateMethod === 'flat' ? avgMonthlyProfit : remaining * (safeRate / 12);

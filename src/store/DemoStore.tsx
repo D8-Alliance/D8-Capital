@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect, useReducer } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 import {
   CountryCode,
   DemoRole,
@@ -13,8 +13,6 @@ import {
   ApplicationStatus,
 } from '../types';
 import { COUNTRIES } from '../data/countries';
-import { PRODUCTS } from '../data/products';
-import { calculateFinancing } from '../services/calculator';
 
 interface DemoState {
   activeScenario: DemoScenarioId;

@@ -3,11 +3,11 @@ import { useDemoStore } from '../store/DemoStore';
 import { useI18n } from '../i18n';
 import { PRODUCTS } from '../data/products';
 import { COUNTRIES } from '../data/countries';
-import { FinancingCategoryType, FinancingProduct } from '../types';
+import { FinancingProduct } from '../types';
 import { FinancingCard } from './FinancingCard';
 import { DemoDataLabel } from './DemoDataLabel';
 import { RegulatoryDisclaimer } from './RegulatoryDisclaimer';
-import { Search, Filter, Layers, ArrowRight, X, Sparkles } from 'lucide-react';
+import { Search, ArrowRight, X } from 'lucide-react';
 
 interface FinancingCataloguePageProps {
   onApply: (product: FinancingProduct) => void;

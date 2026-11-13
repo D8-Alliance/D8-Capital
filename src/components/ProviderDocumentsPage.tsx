@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDemoStore } from '../store/DemoStore';
 import { DemoDataLabel } from './DemoDataLabel';
-import { FileText, CheckCircle2, Download, ShieldCheck, Search } from 'lucide-react';
+import { FileText, CheckCircle2, Download } from 'lucide-react';
 
 export const ProviderDocumentsPage: React.FC = () => {
   const { state } = useDemoStore();

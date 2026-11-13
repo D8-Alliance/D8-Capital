@@ -10,13 +10,7 @@ import { formatCurrency } from '../services/calculator';
 import {
   Building2,
   FileCheck2,
-  Clock,
-  Sparkles,
   ArrowRight,
-  TrendingUp,
-  ShieldCheck,
-  CheckCircle2,
-  Filter,
 } from 'lucide-react';
 
 interface ProviderDashboardProps {
@@ -26,10 +20,9 @@ interface ProviderDashboardProps {
 
 export const ProviderDashboard: React.FC<ProviderDashboardProps> = ({
   onReviewApplication,
-  onNavigateTab,
 }) => {
   const { state } = useDemoStore();
-  const { t, locale } = useI18n();
+  const { locale } = useI18n();
 
   // Provider's application queue for active country
   const providerApps = state.applications.filter((a) => a.country === state.activeCountry);
@@ -46,7 +39,7 @@ export const ProviderDashboard: React.FC<ProviderDashboardProps> = ({
   return (
     <div id="provider-dashboard" className="space-y-8 animate-fadeIn pb-24">
       {/* Provider Hero Header */}
-      <div className="bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-xl border border-blue-900/40 space-y-4">
+      <div className="bg-linear-to-br from-slate-900 via-blue-950 to-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-xl border border-blue-900/40 space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-3">
             <div className="p-3 rounded-2xl bg-blue-600 text-white shadow-md">

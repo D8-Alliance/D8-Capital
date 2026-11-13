@@ -13,7 +13,6 @@ import {
   Sparkles,
   ChevronRight,
   PlusCircle,
-  ShieldCheck,
 } from 'lucide-react';
 
 interface ApplicationsListPageProps {
@@ -70,7 +69,7 @@ export const ApplicationsListPage: React.FC<ApplicationsListPageProps> = ({
                 onClick={() => onSelectApplication(app)}
                 className={`p-5 sm:p-6 rounded-3xl border transition-all duration-200 cursor-pointer hover:shadow-lg flex flex-col md:flex-row md:items-center justify-between gap-4 ${
                   hasOffer
-                    ? 'bg-gradient-to-r from-emerald-50 via-amber-50/40 to-emerald-50 border-emerald-400 ring-2 ring-emerald-400/30'
+                    ? 'bg-linear-to-r from-emerald-50 via-amber-50/40 to-emerald-50 border-emerald-400 ring-2 ring-emerald-400/30'
                     : 'bg-white border-slate-200 hover:border-emerald-300'
                 }`}
               >

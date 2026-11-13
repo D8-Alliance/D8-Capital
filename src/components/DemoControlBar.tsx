@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useDemoStore } from '../store/DemoStore';
-import { useI18n } from '../i18n';
 import { DemoRole, DemoScenarioId } from '../types';
 import { COUNTRIES } from '../data/countries';
 import {
@@ -12,8 +11,6 @@ import {
   UserCheck,
   Building2,
   ShieldAlert,
-  Globe2,
-  Sparkles,
 } from 'lucide-react';
 
 interface DemoControlBarProps {
@@ -23,7 +20,6 @@ interface DemoControlBarProps {
 
 export const DemoControlBar: React.FC<DemoControlBarProps> = ({ onOpenFlowMap, onNavigateTab }) => {
   const { state, setScenario, setRole, resetScenario } = useDemoStore();
-  const { locale } = useI18n();
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   const activeCountryConfig = COUNTRIES[state.activeCountry];

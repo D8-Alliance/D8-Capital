@@ -8,7 +8,7 @@ import { ComparisonTable } from './ComparisonTable';
 import { CurrencyInput } from './CurrencyInput';
 import { DemoDataLabel } from './DemoDataLabel';
 import { RegulatoryDisclaimer } from './RegulatoryDisclaimer';
-import { Sliders, RotateCcw, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 interface ComparisonPageProps {
   onApply: (product: FinancingProduct) => void;

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDemoStore } from '../store/DemoStore';
 import { useI18n } from '../i18n';
 import { COUNTRIES, COUNTRIES_LIST } from '../data/countries';
-import { CountryCode, LocaleCode } from '../types';
+import { CountryCode } from '../types';
 import {
   Globe2,
   Bell,
@@ -13,7 +13,6 @@ import {
   User,
   Menu,
   X,
-  Layers,
 } from 'lucide-react';
 
 interface HeaderProps {
@@ -22,7 +21,7 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({ activeTab, onNavigate }) => {
-  const { state, setCountry, setRole } = useDemoStore();
+  const { state, setCountry } = useDemoStore();
   const { locale, setLocale, t } = useI18n();
   const [showCountryMenu, setShowCountryMenu] = useState(false);
   const [showLangMenu, setShowLangMenu] = useState(false);
