@@ -21,7 +21,7 @@ export const BottomNav: React.FC<BottomNavProps> = ({ activeTab, onNavigate }) =
   return (
     <div
       id="mobile-bottom-nav"
-      className="lg:hidden fixed bottom-12 left-0 right-0 z-30 bg-[#0d0d0d]/95 backdrop-blur-md border-t border-white/5 py-1 px-2 shadow-2xl"
+      className="lg:hidden fixed bottom-12 left-0 right-0 z-30 bg-white/95 backdrop-blur-md border-t border-slate-200 py-1 px-2 shadow-2xl"
     >
       <div className="grid grid-cols-5 gap-1 max-w-md mx-auto">
         {items.map((item) => {
@@ -32,7 +32,7 @@ export const BottomNav: React.FC<BottomNavProps> = ({ activeTab, onNavigate }) =
               key={item.id}
               onClick={() => onNavigate(item.id)}
               className={`flex flex-col items-center justify-center py-1 rounded-lg transition cursor-pointer ${
-                isActive ? 'text-[#c4a67e] font-semibold' : 'text-white/40 hover:text-white/70'
+                isActive ? 'text-[#8a6a3a] font-semibold' : 'text-slate-500 hover:text-slate-600'
               }`}
             >
               <Icon className={`w-4 h-4 ${isActive ? 'stroke-[2.5px]' : 'stroke-2'}`} />

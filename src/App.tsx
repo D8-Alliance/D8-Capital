@@ -285,7 +285,7 @@ function MainAppContent() {
   };
 
   return (
-    <div className="min-h-screen bg-[#090909] flex flex-col justify-between text-[#e5e5e5] selection:bg-[#c4a67e] selection:text-black">
+    <div className="min-h-screen bg-[#f7f5f0] flex flex-col justify-between text-slate-800 selection:bg-[#c4a67e] selection:text-black">
       {/* Header */}
       <Header activeTab={activeTab} onNavigate={handleNavigate} />
 

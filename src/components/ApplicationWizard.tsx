@@ -179,13 +179,13 @@ export const ApplicationWizard: React.FC<ApplicationWizardProps> = ({
   return (
     <div id="application-wizard" className="max-w-4xl mx-auto space-y-6 animate-fadeIn pb-24">
       {/* Wizard Step Indicator */}
-      <div className="bg-[#111111] rounded-2xl p-6 border border-white/10 shadow-xl space-y-4">
+      <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-4">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-xl font-serif-luxury font-bold text-[#c4a67e] tracking-tight">
+            <h2 className="text-xl font-serif-luxury font-bold text-[#8a6a3a] tracking-tight">
               Shariah Financing Application Wizard
             </h2>
-            <p className="text-xs text-white/40">
+            <p className="text-xs text-slate-500">
               {countryConfig.name} • {selectedProduct.name}
             </p>
           </div>
@@ -210,12 +210,12 @@ export const ApplicationWizard: React.FC<ApplicationWizardProps> = ({
                       ? 'bg-emerald-500'
                       : isCurrent
                       ? 'bg-[#c4a67e]'
-                      : 'bg-white/10'
+                      : 'bg-slate-200'
                   }`}
                 />
                 <span
                   className={`text-[11px] font-mono block ${
-                    isCurrent ? 'text-[#c4a67e] font-bold' : 'text-white/40'
+                    isCurrent ? 'text-[#8a6a3a] font-bold' : 'text-slate-500'
                   }`}
                 >
                   {s.num}. {s.label}
@@ -228,9 +228,9 @@ export const ApplicationWizard: React.FC<ApplicationWizardProps> = ({
 
       {/* STEP 1: Facility Details */}
       {currentStep === 1 && (
-        <div className="bg-[#111111] rounded-2xl p-6 sm:p-8 border border-white/10 shadow-xl space-y-6 animate-fadeIn">
-          <h3 className="text-base font-serif-luxury font-bold text-[#c4a67e] flex items-center gap-2.5">
-            <Building className="w-5 h-5 text-[#c4a67e]" />
+        <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6 animate-fadeIn">
+          <h3 className="text-base font-serif-luxury font-bold text-[#8a6a3a] flex items-center gap-2.5">
+            <Building className="w-5 h-5 text-[#8a6a3a]" />
             Step 1: Select Facility & Financing Parameters
           </h3>
 
@@ -242,10 +242,10 @@ export const ApplicationWizard: React.FC<ApplicationWizardProps> = ({
                   const p = countryProducts.find((item) => item.id === e.target.value);
                   if (p) setSelectedProduct(p);
                 }}
-                className="w-full rounded-xl border border-white/10 bg-[#141414] py-2.5 px-3 text-xs font-semibold text-white focus:border-[#c4a67e] focus:outline-none"
+                className="w-full rounded-xl border border-slate-200 bg-stone-50 py-2.5 px-3 text-xs font-semibold text-slate-900 focus:border-[#c4a67e] focus:outline-none"
               >
                 {countryProducts.map((p) => (
-                  <option key={p.id} value={p.id} className="bg-[#141414] text-white">
+                  <option key={p.id} value={p.id} className="bg-stone-50 text-slate-900">
                     {p.name} ({p.shariahStructure} • {formatProfitRate(p.annualProfitRate)})
                   </option>
                 ))}
@@ -257,13 +257,13 @@ export const ApplicationWizard: React.FC<ApplicationWizardProps> = ({
                 type="text"
                 value={financingPurpose}
                 onChange={(e) => setFinancingPurpose(e.target.value)}
-                className="w-full rounded-xl border border-white/10 bg-[#141414] py-2.5 px-3 text-xs font-semibold text-white placeholder:text-white/30 focus:border-[#c4a67e] focus:outline-none"
+                className="w-full rounded-xl border border-slate-200 bg-stone-50 py-2.5 px-3 text-xs font-semibold text-slate-900 placeholder:text-slate-400 focus:border-[#c4a67e] focus:outline-none"
                 placeholder="e.g. Asset Purchase, Working Capital"
               />
             </FormField>
 
             <div className="md:col-span-2">
-              <label className="block text-xs font-mono font-medium text-white/70 uppercase tracking-wider mb-2">
+              <label className="block text-xs font-mono font-medium text-slate-600 uppercase tracking-wider mb-2">
                 Requested Financing Amount
               </label>
               <CurrencyInput
@@ -275,15 +275,15 @@ export const ApplicationWizard: React.FC<ApplicationWizardProps> = ({
                 max={selectedProduct.maxAmount}
                 step={5000}
               />
-              <span className="text-[10px] text-white/40 mt-1 block font-mono">
+              <span className="text-[10px] text-slate-500 mt-1 block font-mono">
                 Permissible range: {formatCurrency(selectedProduct.minAmount, state.activeCountry, locale)} – {formatCurrency(selectedProduct.maxAmount, state.activeCountry, locale)}
               </span>
             </div>
 
             <div className="md:col-span-2">
               <div className="flex items-center justify-between mb-1.5">
-                <label className="text-xs font-mono font-medium text-white/70 uppercase tracking-wider">
-                  Financing Tenure: <span className="text-[#c4a67e] font-mono font-bold">{tenureYears} Years</span>
+                <label className="text-xs font-mono font-medium text-slate-600 uppercase tracking-wider">
+                  Financing Tenure: <span className="text-[#8a6a3a] font-mono font-bold">{tenureYears} Years</span>
                 </label>
               </div>
               <input
@@ -293,30 +293,30 @@ export const ApplicationWizard: React.FC<ApplicationWizardProps> = ({
                 step={1}
                 value={tenureYears}
                 onChange={(e) => setTenureYears(parseInt(e.target.value))}
-                className="w-full accent-[#c4a67e] h-2 bg-white/10 rounded-lg cursor-pointer"
+                className="w-full accent-[#c4a67e] h-2 bg-slate-200 rounded-lg cursor-pointer"
               />
             </div>
           </div>
 
           {/* Real-time Calculation Summary Box */}
-          <div className="p-4 bg-[#141414] border border-white/10 rounded-xl flex items-center justify-between">
+          <div className="p-4 bg-stone-50 border border-slate-200 rounded-xl flex items-center justify-between">
             <div>
-              <span className="text-[10px] uppercase font-mono font-bold text-[#c4a67e]">Estimated Monthly Instalment</span>
-              <div className="text-2xl font-bold text-white font-mono">
+              <span className="text-[10px] uppercase font-mono font-bold text-[#8a6a3a]">Estimated Monthly Instalment</span>
+              <div className="text-2xl font-bold text-slate-900 font-mono">
                 {formatCurrency(calc.monthlyInstalment, state.activeCountry, locale)}
               </div>
             </div>
             <div className="text-right text-xs">
-              <span className="text-white/40 block">Total Profit: {formatCurrency(calc.totalProfit, state.activeCountry, locale)}</span>
-              <span className="font-bold text-[#c4a67e] block">Total Payable: {formatCurrency(calc.totalPayable, state.activeCountry, locale)}</span>
+              <span className="text-slate-500 block">Total Profit: {formatCurrency(calc.totalProfit, state.activeCountry, locale)}</span>
+              <span className="font-bold text-[#8a6a3a] block">Total Payable: {formatCurrency(calc.totalPayable, state.activeCountry, locale)}</span>
             </div>
           </div>
 
-          <div className="flex justify-between pt-4 border-t border-white/10">
+          <div className="flex justify-between pt-4 border-t border-slate-200">
             <button
               type="button"
               onClick={onCancel}
-              className="px-5 py-2.5 text-xs font-medium text-white/50 hover:text-white transition cursor-pointer"
+              className="px-5 py-2.5 text-xs font-medium text-slate-500 hover:text-slate-900 transition cursor-pointer"
             >
               Cancel
             </button>
@@ -334,13 +334,13 @@ export const ApplicationWizard: React.FC<ApplicationWizardProps> = ({
 
       {/* STEP 2: e-KYC / KYB Profile */}
       {currentStep === 2 && (
-        <div className="bg-[#111111] rounded-2xl p-6 sm:p-8 border border-white/10 shadow-xl space-y-6 animate-fadeIn">
+        <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6 animate-fadeIn">
           <div className="flex items-center justify-between">
-            <h3 className="text-base font-serif-luxury font-bold text-[#c4a67e] flex items-center gap-2.5">
-              <User className="w-5 h-5 text-[#c4a67e]" />
+            <h3 className="text-base font-serif-luxury font-bold text-[#8a6a3a] flex items-center gap-2.5">
+              <User className="w-5 h-5 text-[#8a6a3a]" />
               Step 2: Applicant Identity & Employment Verification (e-KYC)
             </h3>
-            <span className="text-[10px] uppercase font-mono font-bold bg-[#c4a67e]/15 text-[#c4a67e] border border-[#c4a67e]/30 px-2 py-0.5 rounded">
+            <span className="text-[10px] uppercase font-mono font-bold bg-[#c4a67e]/15 text-[#8a6a3a] border border-[#c4a67e]/30 px-2 py-0.5 rounded">
               Demo Prefilled
             </span>
           </div>
@@ -351,7 +351,7 @@ export const ApplicationWizard: React.FC<ApplicationWizardProps> = ({
                 type="text"
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
-                className="w-full rounded-xl border border-white/10 bg-[#141414] py-2.5 px-3 font-semibold text-white focus:border-[#c4a67e] focus:outline-none"
+                className="w-full rounded-xl border border-slate-200 bg-stone-50 py-2.5 px-3 font-semibold text-slate-900 focus:border-[#c4a67e] focus:outline-none"
               />
             </FormField>
 
@@ -360,7 +360,7 @@ export const ApplicationWizard: React.FC<ApplicationWizardProps> = ({
                 type="text"
                 value={idNumber}
                 onChange={(e) => setIdNumber(e.target.value)}
-                className="w-full rounded-xl border border-white/10 bg-[#141414] py-2.5 px-3 font-semibold font-mono text-white focus:border-[#c4a67e] focus:outline-none"
+                className="w-full rounded-xl border border-slate-200 bg-stone-50 py-2.5 px-3 font-semibold font-mono text-slate-900 focus:border-[#c4a67e] focus:outline-none"
               />
             </FormField>
 
@@ -378,7 +378,7 @@ export const ApplicationWizard: React.FC<ApplicationWizardProps> = ({
                 type="text"
                 value={employerOrCompany}
                 onChange={(e) => setEmployerOrCompany(e.target.value)}
-                className="w-full rounded-xl border border-white/10 bg-[#141414] py-2.5 px-3 font-semibold text-white focus:border-[#c4a67e] focus:outline-none"
+                className="w-full rounded-xl border border-slate-200 bg-stone-50 py-2.5 px-3 font-semibold text-slate-900 focus:border-[#c4a67e] focus:outline-none"
               />
             </FormField>
 
@@ -387,7 +387,7 @@ export const ApplicationWizard: React.FC<ApplicationWizardProps> = ({
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full rounded-xl border border-white/10 bg-[#141414] py-2.5 px-3 font-semibold text-white focus:border-[#c4a67e] focus:outline-none"
+                className="w-full rounded-xl border border-slate-200 bg-stone-50 py-2.5 px-3 font-semibold text-slate-900 focus:border-[#c4a67e] focus:outline-none"
               />
             </FormField>
 
@@ -396,16 +396,16 @@ export const ApplicationWizard: React.FC<ApplicationWizardProps> = ({
                 type="tel"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                className="w-full rounded-xl border border-white/10 bg-[#141414] py-2.5 px-3 font-semibold font-mono text-white focus:border-[#c4a67e] focus:outline-none"
+                className="w-full rounded-xl border border-slate-200 bg-stone-50 py-2.5 px-3 font-semibold font-mono text-slate-900 focus:border-[#c4a67e] focus:outline-none"
               />
             </FormField>
           </div>
 
-          <div className="flex justify-between pt-4 border-t border-white/10">
+          <div className="flex justify-between pt-4 border-t border-slate-200">
             <button
               type="button"
               onClick={() => setCurrentStep(1)}
-              className="px-5 py-2.5 text-xs font-medium text-white/50 hover:text-white transition flex items-center gap-1.5 cursor-pointer"
+              className="px-5 py-2.5 text-xs font-medium text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer"
             >
               <ArrowLeft className="w-4 h-4" />
               <span>Back</span>
@@ -424,13 +424,13 @@ export const ApplicationWizard: React.FC<ApplicationWizardProps> = ({
 
       {/* STEP 3: Document Uploads */}
       {currentStep === 3 && (
-        <div className="bg-[#111111] rounded-2xl p-6 sm:p-8 border border-white/10 shadow-xl space-y-6 animate-fadeIn">
+        <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6 animate-fadeIn">
           <div>
-            <h3 className="text-base font-serif-luxury font-bold text-[#c4a67e] flex items-center gap-2.5">
-              <UploadCloud className="w-5 h-5 text-[#c4a67e]" />
+            <h3 className="text-base font-serif-luxury font-bold text-[#8a6a3a] flex items-center gap-2.5">
+              <UploadCloud className="w-5 h-5 text-[#8a6a3a]" />
               Step 3: Upload Supporting Documents
             </h3>
-            <p className="text-xs text-white/40 mt-1">
+            <p className="text-xs text-slate-500 mt-1">
               Required for institutional credit assessment under {countryConfig.name} banking regulations.
             </p>
           </div>
@@ -451,11 +451,11 @@ export const ApplicationWizard: React.FC<ApplicationWizardProps> = ({
             })}
           </div>
 
-          <div className="flex justify-between pt-4 border-t border-white/10">
+          <div className="flex justify-between pt-4 border-t border-slate-200">
             <button
               type="button"
               onClick={() => setCurrentStep(2)}
-              className="px-5 py-2.5 text-xs font-medium text-white/50 hover:text-white transition flex items-center gap-1.5 cursor-pointer"
+              className="px-5 py-2.5 text-xs font-medium text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer"
             >
               <ArrowLeft className="w-4 h-4" />
               <span>Back</span>
@@ -474,58 +474,58 @@ export const ApplicationWizard: React.FC<ApplicationWizardProps> = ({
 
       {/* STEP 4: Review & Submit */}
       {currentStep === 4 && (
-        <div className="bg-[#111111] rounded-2xl p-6 sm:p-8 border border-white/10 shadow-xl space-y-6 animate-fadeIn">
+        <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6 animate-fadeIn">
           <div>
-            <h3 className="text-base font-serif-luxury font-bold text-[#c4a67e] flex items-center gap-2.5">
-              <FileCheck className="w-5 h-5 text-[#c4a67e]" />
+            <h3 className="text-base font-serif-luxury font-bold text-[#8a6a3a] flex items-center gap-2.5">
+              <FileCheck className="w-5 h-5 text-[#8a6a3a]" />
               Step 4: Shariah Governance Review & Submission
             </h3>
-            <p className="text-xs text-white/40 mt-1">
+            <p className="text-xs text-slate-500 mt-1">
               Please verify all details before submitting to the participating Islamic institution.
             </p>
           </div>
 
           {/* Dossier Summary Bento */}
-          <div className="p-5 bg-[#141414] rounded-xl border border-white/10 space-y-4">
+          <div className="p-5 bg-stone-50 rounded-xl border border-slate-200 space-y-4">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs">
               <div>
-                <span className="text-[10px] uppercase font-mono font-bold text-white/40 block">Facility Name</span>
-                <span className="font-bold text-white block mt-0.5">{selectedProduct.name}</span>
-                <span className="text-[10px] text-[#c4a67e] font-mono font-semibold">{selectedProduct.shariahStructure}</span>
+                <span className="text-[10px] uppercase font-mono font-bold text-slate-500 block">Facility Name</span>
+                <span className="font-bold text-slate-900 block mt-0.5">{selectedProduct.name}</span>
+                <span className="text-[10px] text-[#8a6a3a] font-mono font-semibold">{selectedProduct.shariahStructure}</span>
               </div>
               <div>
-                <span className="text-[10px] uppercase font-mono font-bold text-white/40 block">Financing Provider</span>
-                <span className="font-bold text-white block mt-0.5">{provider?.name}</span>
+                <span className="text-[10px] uppercase font-mono font-bold text-slate-500 block">Financing Provider</span>
+                <span className="font-bold text-slate-900 block mt-0.5">{provider?.name}</span>
               </div>
               <div>
-                <span className="text-[10px] uppercase font-mono font-bold text-white/40 block">Facility Amount</span>
-                <span className="font-bold text-white font-mono text-sm block mt-0.5">
+                <span className="text-[10px] uppercase font-mono font-bold text-slate-500 block">Facility Amount</span>
+                <span className="font-bold text-slate-900 font-mono text-sm block mt-0.5">
                   {formatCurrency(amount, state.activeCountry, locale)}
                 </span>
               </div>
               <div>
-                <span className="text-[10px] uppercase font-mono font-bold text-white/40 block">Monthly Instalment</span>
-                <span className="font-bold text-[#c4a67e] font-mono text-sm block mt-0.5">
+                <span className="text-[10px] uppercase font-mono font-bold text-slate-500 block">Monthly Instalment</span>
+                <span className="font-bold text-[#8a6a3a] font-mono text-sm block mt-0.5">
                   {formatCurrency(calc.monthlyInstalment, state.activeCountry, locale)}
                 </span>
               </div>
             </div>
 
-            <div className="pt-3 border-t border-white/10 text-xs text-white/60 flex items-center justify-between">
-              <span>Applicant: <strong className="text-white">{fullName}</strong> ({idNumber})</span>
-              <span>Documents Attached: <strong className="text-[#c4a67e]">{uploadedDocs.length} Verified Scans</strong></span>
+            <div className="pt-3 border-t border-slate-200 text-xs text-slate-600 flex items-center justify-between">
+              <span>Applicant: <strong className="text-slate-900">{fullName}</strong> ({idNumber})</span>
+              <span>Documents Attached: <strong className="text-[#8a6a3a]">{uploadedDocs.length} Verified Scans</strong></span>
             </div>
           </div>
 
           {/* Shariah Compliance Declarations */}
-          <div className="p-4 bg-[#141414] border border-[#c4a67e]/30 rounded-xl space-y-2 text-xs text-white/80">
-            <div className="flex items-center gap-2 font-bold text-[#c4a67e]">
-              <ShieldCheck className="w-4 h-4 text-[#c4a67e]" />
+          <div className="p-4 bg-stone-50 border border-[#c4a67e]/30 rounded-xl space-y-2 text-xs text-slate-700">
+            <div className="flex items-center gap-2 font-bold text-[#8a6a3a]">
+              <ShieldCheck className="w-4 h-4 text-[#8a6a3a]" />
               <span>Shariah Contract & Governance Declarations</span>
             </div>
-            <p className="text-[11px] leading-relaxed text-white/60">
+            <p className="text-[11px] leading-relaxed text-slate-600">
               I acknowledge that this financing arrangement is executed under the principle of{' '}
-              <strong className="text-[#c4a67e]">{selectedProduct.shariahStructure}</strong> and complies with the Shariah governance resolutions of{' '}
+              <strong className="text-[#8a6a3a]">{selectedProduct.shariahStructure}</strong> and complies with the Shariah governance resolutions of{' '}
               {countryConfig.regulatoryBody}. In case of early settlement, Ibra' (rebate) will be granted as per institutional policy.
             </p>
             <label className="flex items-start gap-2 pt-2 cursor-pointer">
@@ -535,17 +535,17 @@ export const ApplicationWizard: React.FC<ApplicationWizardProps> = ({
                 onChange={(e) => setTermsAgreed(e.target.checked)}
                 className="mt-0.5 accent-[#c4a67e] w-4 h-4 rounded cursor-pointer"
               />
-              <span className="text-xs text-white/80">
+              <span className="text-xs text-slate-700">
                 I confirm the accuracy of the information provided and authorize the participating institution to perform requisite credit and Shariah assessment checks.
               </span>
             </label>
           </div>
 
-          <div className="flex justify-between pt-4 border-t border-white/10">
+          <div className="flex justify-between pt-4 border-t border-slate-200">
             <button
               type="button"
               onClick={() => setCurrentStep(3)}
-              className="px-5 py-2.5 text-xs font-medium text-white/50 hover:text-white transition flex items-center gap-1.5 cursor-pointer"
+              className="px-5 py-2.5 text-xs font-medium text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer"
             >
               <ArrowLeft className="w-4 h-4" />
               <span>Back</span>

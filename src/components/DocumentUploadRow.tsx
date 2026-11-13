@@ -59,10 +59,10 @@ export const DocumentUploadRow: React.FC<DocumentUploadRowProps> = ({
       id={`doc-upload-${documentName.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
       className={`p-4 rounded-xl border transition-all duration-200 ${
         existingDoc
-          ? 'bg-[#141414] border-[#c4a67e]/40'
+          ? 'bg-stone-50 border-[#c4a67e]/40'
           : isDragging
-          ? 'bg-[#181818] border-[#c4a67e] ring-1 ring-[#c4a67e]'
-          : 'bg-[#141414] border-white/10 hover:border-white/20'
+          ? 'bg-stone-100 border-[#c4a67e] ring-1 ring-[#c4a67e]'
+          : 'bg-stone-50 border-slate-200 hover:border-slate-300'
       }`}
       onDragOver={(e) => {
         e.preventDefault();
@@ -77,33 +77,33 @@ export const DocumentUploadRow: React.FC<DocumentUploadRowProps> = ({
             className={`p-2.5 rounded-lg shrink-0 ${
               existingDoc
                 ? 'bg-[#c4a67e] text-black'
-                : 'bg-white/5 border border-white/10 text-[#c4a67e]'
+                : 'bg-slate-100 border border-slate-200 text-[#8a6a3a]'
             }`}
           >
             {existingDoc ? <FileText className="w-5 h-5" /> : <UploadCloud className="w-5 h-5" />}
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <h4 className="text-sm font-medium text-white">{documentName}</h4>
+              <h4 className="text-sm font-medium text-slate-900">{documentName}</h4>
               {required && (
-                <span className="text-[10px] uppercase font-mono font-bold text-[#c4a67e] bg-[#c4a67e]/15 border border-[#c4a67e]/30 px-1.5 py-0.5 rounded">
+                <span className="text-[10px] uppercase font-mono font-bold text-[#8a6a3a] bg-[#c4a67e]/15 border border-[#c4a67e]/30 px-1.5 py-0.5 rounded">
                   Required
                 </span>
               )}
             </div>
-            <p className="text-xs text-white/40 mt-0.5">{categoryName}</p>
+            <p className="text-xs text-slate-500 mt-0.5">{categoryName}</p>
           </div>
         </div>
 
         <div>
           {existingDoc ? (
-            <div className="flex items-center gap-3 bg-[#181818] px-3 py-1.5 rounded-lg border border-white/10">
+            <div className="flex items-center gap-3 bg-stone-100 px-3 py-1.5 rounded-lg border border-slate-200">
               <div className="text-right">
-                <span className="text-xs font-medium text-emerald-400 flex items-center gap-1">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                <span className="text-xs font-medium text-emerald-700 flex items-center gap-1">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700" />
                   {existingDoc.name}
                 </span>
-                <span className="text-[10px] text-white/40 font-mono block">
+                <span className="text-[10px] text-slate-500 font-mono block">
                   {existingDoc.fileSize} • Verified (Demo)
                 </span>
               </div>
@@ -111,7 +111,7 @@ export const DocumentUploadRow: React.FC<DocumentUploadRowProps> = ({
                 <button
                   type="button"
                   onClick={onRemove}
-                  className="p-1 text-white/40 hover:text-rose-400 rounded transition cursor-pointer"
+                  className="p-1 text-slate-500 hover:text-rose-600 rounded transition cursor-pointer"
                   title="Remove"
                 >
                   <Trash2 className="w-4 h-4" />
@@ -131,7 +131,7 @@ export const DocumentUploadRow: React.FC<DocumentUploadRowProps> = ({
                 type="button"
                 disabled={isSimulatingUpload}
                 onClick={() => fileInputRef.current?.click()}
-                className="px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-white text-xs font-medium transition flex items-center gap-2 cursor-pointer disabled:opacity-50"
+                className="px-4 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-900 text-xs font-medium transition flex items-center gap-2 cursor-pointer disabled:opacity-50"
               >
                 {isSimulatingUpload ? (
                   <>
@@ -140,7 +140,7 @@ export const DocumentUploadRow: React.FC<DocumentUploadRowProps> = ({
                   </>
                 ) : (
                   <>
-                    <UploadCloud className="w-3.5 h-3.5 text-[#c4a67e]" />
+                    <UploadCloud className="w-3.5 h-3.5 text-[#8a6a3a]" />
                     <span>Attach File (Demo)</span>
                   </>
                 )}

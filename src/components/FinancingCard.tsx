@@ -44,8 +44,8 @@ export const FinancingCard: React.FC<FinancingCardProps> = ({
     <>
       <div
         id={`product-card-${product.id}`}
-        className={`relative bg-[#111111] rounded-2xl border transition-all duration-300 overflow-hidden flex flex-col justify-between hover:shadow-2xl hover:border-[#c4a67e]/40 ${
-          product.featured ? 'ring-1 ring-[#c4a67e]/50 border-[#c4a67e]/30' : 'border-white/10'
+        className={`relative bg-white rounded-2xl border transition-all duration-300 overflow-hidden flex flex-col justify-between hover:shadow-2xl hover:border-[#c4a67e]/40 ${
+          product.featured ? 'ring-1 ring-[#c4a67e]/50 border-[#c4a67e]/30' : 'border-slate-200'
         }`}
       >
         <div className="relative h-36 overflow-hidden">
@@ -55,7 +55,7 @@ export const FinancingCard: React.FC<FinancingCardProps> = ({
             loading="lazy"
             className="h-full w-full object-cover transition duration-500 hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#111111] via-[#111111]/20 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent" />
           <span className="absolute bottom-3 left-4 rounded-full border border-white/20 bg-black/45 px-2.5 py-1 text-[10px] font-mono font-bold uppercase tracking-wider text-white backdrop-blur-sm">
             {isTakaful ? 'Takaful Protection' : product.category}
           </span>
@@ -77,7 +77,7 @@ export const FinancingCard: React.FC<FinancingCardProps> = ({
           <div className="flex items-start justify-between gap-3">
             <div className="flex items-center gap-3">
               <div
-                className="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-xs shadow-inner border border-white/10"
+                className="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-xs shadow-inner border border-slate-200"
                 style={{
                   backgroundColor: '#181818',
                   color: '#c4a67e',
@@ -86,73 +86,73 @@ export const FinancingCard: React.FC<FinancingCardProps> = ({
                 {provider?.logoText || 'IB'}
               </div>
               <div>
-                <span className="text-xs font-medium text-white/40 block">
+                <span className="text-xs font-medium text-slate-500 block">
                   {provider?.name || 'Islamic Financial Institution'}
                 </span>
-                <h3 className="text-base font-serif-luxury font-bold text-white tracking-tight leading-snug">
+                <h3 className="text-base font-serif-luxury font-bold text-slate-900 tracking-tight leading-snug">
                   {product.name}
                 </h3>
               </div>
             </div>
 
             <div className="text-right">
-              <span className="inline-block px-2.5 py-1 rounded-full text-[10px] font-mono uppercase font-semibold bg-[#c4a67e]/10 text-[#c4a67e] border border-[#c4a67e]/25">
+              <span className="inline-block px-2.5 py-1 rounded-full text-[10px] font-mono uppercase font-semibold bg-[#c4a67e]/10 text-[#8a6a3a] border border-[#c4a67e]/25">
                 {product.shariahStructure}
               </span>
             </div>
           </div>
 
           {/* Key Metrics Bento */}
-          <div className="grid grid-cols-2 gap-2.5 p-3.5 bg-[#141414] rounded-xl border border-white/5">
+          <div className="grid grid-cols-2 gap-2.5 p-3.5 bg-stone-50 rounded-xl border border-slate-200">
             {isTakaful ? (
               <>
                 <div>
-                  <span className="text-[9px] uppercase font-mono font-bold text-white/40 block tracking-wider">
+                  <span className="text-[9px] uppercase font-mono font-bold text-slate-500 block tracking-wider">
                     Annual Contribution
                   </span>
-                  <span className="text-xl font-bold text-[#c4a67e] font-mono block mt-0.5">
+                  <span className="text-xl font-bold text-[#8a6a3a] font-mono block mt-0.5">
                     {formatCurrency(product.takafulData?.annualContribution || 0, product.country, locale)}
                   </span>
-                  <span className="text-[10px] text-white/30 font-medium">
+                  <span className="text-[10px] text-slate-400 font-medium">
                     {product.takafulData?.contributionFrequency}
                   </span>
                 </div>
                 <div>
-                  <span className="text-[9px] uppercase font-mono font-bold text-white/40 block tracking-wider">
+                  <span className="text-[9px] uppercase font-mono font-bold text-slate-500 block tracking-wider">
                     Coverage Amount
                   </span>
-                  <span className="text-xl font-bold text-white font-mono block mt-0.5">
+                  <span className="text-xl font-bold text-slate-900 font-mono block mt-0.5">
                     {formatCurrency(product.takafulData?.coverageAmount || 0, product.country, locale)}
                   </span>
-                  <span className="text-[10px] text-white/30">Protection benefit</span>
+                  <span className="text-[10px] text-slate-400">Protection benefit</span>
                 </div>
               </>
             ) : (
               <>
               <div>
-              <span className="text-[9px] uppercase font-mono font-bold text-white/40 block tracking-wider">
+              <span className="text-[9px] uppercase font-mono font-bold text-slate-500 block tracking-wider">
                 {t('common.profitRate')}
               </span>
               <div className="flex items-baseline gap-1 mt-0.5">
-                <span className="text-xl font-bold text-[#c4a67e] font-mono">
+                <span className="text-xl font-bold text-[#8a6a3a] font-mono">
                   {formatProfitRate(product.annualProfitRate)}
                 </span>
               </div>
-              <span className="text-[10px] text-white/30 font-medium">
+              <span className="text-[10px] text-slate-400 font-medium">
                 {product.rateMethod === 'flat' ? t('common.flatRate') : t('common.reducingRate')}
               </span>
             </div>
 
             <div>
-              <span className="text-[9px] uppercase font-mono font-bold text-white/40 block tracking-wider">
+              <span className="text-[9px] uppercase font-mono font-bold text-slate-500 block tracking-wider">
                 {t('common.monthlyInstalment')}
               </span>
               <div className="flex items-baseline gap-1 mt-0.5">
-                <span className="text-xl font-bold text-white font-mono">
+                <span className="text-xl font-bold text-slate-900 font-mono">
                 {formatCurrency(calculation?.monthlyInstalment || 0, product.country, locale)}
                 </span>
               </div>
-              <span className="text-[10px] text-white/30">
+              <span className="text-[10px] text-slate-400">
                 {formatCurrency(defaultAmount, product.country, locale)} / {defaultTenure}y
               </span>
             </div>
@@ -163,8 +163,8 @@ export const FinancingCard: React.FC<FinancingCardProps> = ({
           {/* Highlights */}
           <div className="space-y-1.5">
             {product.keyFeatures.slice(0, 2).map((feature, i) => (
-              <div key={i} className="flex items-center gap-2 text-xs text-white/70">
-                <ShieldCheck className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+              <div key={i} className="flex items-center gap-2 text-xs text-slate-600">
+                <ShieldCheck className="w-3.5 h-3.5 text-emerald-700 shrink-0" />
                 <span className="line-clamp-1">{feature}</span>
               </div>
             ))}
@@ -174,7 +174,7 @@ export const FinancingCard: React.FC<FinancingCardProps> = ({
         </div>
 
         {/* Action Bottom Bar */}
-        <div className="p-4 bg-[#0d0d0d] border-t border-white/5 flex items-center justify-between gap-2">
+        <div className="p-4 bg-stone-50 border-t border-slate-200 flex items-center justify-between gap-2">
           <div className="flex items-center gap-2">
             {/* Compare Checkbox */}
             <button
@@ -183,7 +183,7 @@ export const FinancingCard: React.FC<FinancingCardProps> = ({
               className={`px-3 py-1.5 rounded-lg text-xs font-medium transition flex items-center gap-1.5 cursor-pointer ${
                 isCompared
                   ? 'bg-[#c4a67e] text-black font-semibold shadow-xs'
-                  : 'bg-[#141414] text-white/70 border border-white/10 hover:bg-white/5'
+                  : 'bg-stone-50 text-slate-600 border border-slate-200 hover:bg-slate-100'
               }`}
             >
               {isCompared ? <Check className="w-3.5 h-3.5" /> : <Plus className="w-3.5 h-3.5" />}
@@ -195,7 +195,7 @@ export const FinancingCard: React.FC<FinancingCardProps> = ({
               <button
                 type="button"
                 onClick={() => setShowPds(true)}
-                className="px-2.5 py-1.5 text-xs text-[#c4a67e] hover:text-[#d4b890] font-mono font-medium flex items-center gap-1 transition rounded-lg hover:bg-white/5 cursor-pointer border border-transparent hover:border-white/10"
+                className="px-2.5 py-1.5 text-xs text-[#8a6a3a] hover:text-[#6f5530] font-mono font-medium flex items-center gap-1 transition rounded-lg hover:bg-slate-100 cursor-pointer border border-transparent hover:border-slate-200"
                 title="View Product Disclosure Sheet"
               >
                 <FileText className="w-3.5 h-3.5" />

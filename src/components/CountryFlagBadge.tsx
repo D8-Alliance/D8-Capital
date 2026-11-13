@@ -18,12 +18,12 @@ export const CountryFlagBadge: React.FC<CountryFlagBadgeProps> = ({
   return (
     <span
       id={`country-flag-${country}`}
-      className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#141414] text-white/90 text-xs font-medium border border-white/10 ${className}`}
+      className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-stone-50 text-slate-800 text-xs font-medium border border-slate-200 ${className}`}
     >
       <span className="text-sm leading-none">{config.flag}</span>
       <span>{config.name}</span>
       {showCurrency && (
-        <span className="text-[#c4a67e] bg-[#c4a67e]/10 border border-[#c4a67e]/20 px-1.5 py-0.5 rounded text-[10px] font-mono font-semibold">
+        <span className="text-[#8a6a3a] bg-[#c4a67e]/10 border border-[#c4a67e]/20 px-1.5 py-0.5 rounded text-[10px] font-mono font-semibold">
           {config.currency}
         </span>
       )}

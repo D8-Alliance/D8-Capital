@@ -34,9 +34,9 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onEnterApp }) => {
   };
 
   return (
-    <div id="landing-page" className="min-h-screen bg-slate-950 text-white flex flex-col justify-between selection:bg-emerald-500 selection:text-slate-950">
+    <div id="landing-page" className="min-h-screen bg-[#f7f5f0] text-slate-900 flex flex-col justify-between selection:bg-emerald-200 selection:text-emerald-950">
       {/* Top Banner */}
-      <div className="bg-amber-500/10 border-b border-amber-500/20 px-4 py-2 text-center text-xs text-amber-300 flex items-center justify-center gap-2">
+      <div className="bg-amber-500/10 border-b border-amber-500/20 px-4 py-2 text-center text-xs text-amber-800 flex items-center justify-center gap-2">
         <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
         <span>
           <strong>D8 Capital Prototype</strong> • Standalone Shariah-Compliant Digital Financing Marketplace (HC-1 to HC-7 Compliant)
@@ -47,8 +47,8 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onEnterApp }) => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 space-y-12">
         {/* Brand & Value Prop */}
         <div className="text-center max-w-3xl mx-auto space-y-5">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 text-xs font-bold shadow-lg">
-            <ShieldCheck className="w-4 h-4 text-emerald-400" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold shadow-lg">
+            <ShieldCheck className="w-4 h-4 text-emerald-700" />
             <span>Islamic & Katılım Banking Interoperability</span>
           </div>
 
@@ -56,18 +56,18 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onEnterApp }) => {
             Digital Islamic Financing Marketplace
           </h1>
 
-          <p className="text-sm sm:text-lg text-slate-300 leading-relaxed font-light">
+          <p className="text-sm sm:text-lg text-slate-600 leading-relaxed font-light">
             Connecting financing seekers with participating Islamic financial institutions in{' '}
-            <strong className="text-emerald-400 font-semibold">Malaysia 🇲🇾</strong>,{' '}
-            <strong className="text-red-400 font-semibold">Türkiye 🇹🇷</strong>, and{' '}
-            <strong className="text-blue-400 font-semibold">Azerbaijan 🇦🇿</strong>.
+            <strong className="text-emerald-700 font-semibold">Malaysia 🇲🇾</strong>,{' '}
+            <strong className="text-red-700 font-semibold">Türkiye 🇹🇷</strong>, and{' '}
+            <strong className="text-blue-700 font-semibold">Azerbaijan 🇦🇿</strong>.
           </p>
         </div>
 
         {/* 3 Country Selector Cards (STEP 1 & 2) */}
         <div className="space-y-4">
           <div className="text-center">
-            <span className="text-xs uppercase font-bold text-slate-400 tracking-wider block">
+            <span className="text-xs uppercase font-bold text-slate-500 tracking-wider block">
               Step 1 & 2: Select Country Jurisdiction
             </span>
           </div>
@@ -76,24 +76,24 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onEnterApp }) => {
             {/* Malaysia Card */}
             <div
               onClick={() => handleSelectCountry('MY', 'MY_PERSONAL')}
-              className="group p-6 rounded-3xl bg-slate-900/90 border border-slate-800 hover:border-emerald-500 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-[1.02] cursor-pointer flex flex-col justify-between space-y-6"
+              className="group p-6 rounded-3xl bg-white border border-slate-200 hover:border-emerald-500 transition-all duration-300 shadow-sm hover:shadow-xl hover:scale-[1.02] cursor-pointer flex flex-col justify-between space-y-6"
             >
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-4xl">🇲🇾</span>
-                  <span className="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                  <span className="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
                     MYR (RM)
                   </span>
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-bold text-white group-hover:text-emerald-400 transition">
+                  <h3 className="text-lg font-bold text-slate-900 group-hover:text-emerald-700 transition">
                     Malaysia
                   </h3>
-                  <span className="text-xs text-slate-400">Primary Management Demo (§20)</span>
+                  <span className="text-xs text-slate-500">Primary Management Demo (§20)</span>
                 </div>
 
-                <p className="text-xs text-slate-300 leading-relaxed">
+                <p className="text-xs text-slate-600 leading-relaxed">
                   Personal Financing-i (RM50,000 / 7 years), Tawarruq commodity murabahah, BNM SAC compliance, and PDS schedules.
                 </p>
               </div>
@@ -110,24 +110,24 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onEnterApp }) => {
             {/* Türkiye Card */}
             <div
               onClick={() => handleSelectCountry('TR', 'TR_VEHICLE')}
-              className="group p-6 rounded-3xl bg-slate-900/90 border border-slate-800 hover:border-red-500 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-[1.02] cursor-pointer flex flex-col justify-between space-y-6"
+              className="group p-6 rounded-3xl bg-white border border-slate-200 hover:border-red-500 transition-all duration-300 shadow-sm hover:shadow-xl hover:scale-[1.02] cursor-pointer flex flex-col justify-between space-y-6"
             >
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-4xl">🇹🇷</span>
-                  <span className="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-red-500/20 text-red-400 border border-red-500/30">
+                  <span className="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-red-50 text-red-700 border border-red-200">
                     TRY (₺)
                   </span>
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-bold text-white group-hover:text-red-400 transition">
+                  <h3 className="text-lg font-bold text-slate-900 group-hover:text-red-700 transition">
                     Türkiye
                   </h3>
-                  <span className="text-xs text-slate-400">Katılım Finansmanı</span>
+                  <span className="text-xs text-slate-500">Katılım Finansmanı</span>
                 </div>
 
-                <p className="text-xs text-slate-300 leading-relaxed">
+                <p className="text-xs text-slate-600 leading-relaxed">
                   Taşıt Katılım Finansmanı (₺1.200.000 / 48 ay), Murabaha contract, TKBB compliance, and reducing balance profit rates.
                 </p>
               </div>
@@ -144,24 +144,24 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onEnterApp }) => {
             {/* Azerbaijan Card */}
             <div
               onClick={() => handleSelectCountry('AZ', 'AZ_SME')}
-              className="group p-6 rounded-3xl bg-slate-900/90 border border-slate-800 hover:border-blue-500 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-[1.02] cursor-pointer flex flex-col justify-between space-y-6"
+              className="group p-6 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 transition-all duration-300 shadow-sm hover:shadow-xl hover:scale-[1.02] cursor-pointer flex flex-col justify-between space-y-6"
             >
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-4xl">🇦🇿</span>
-                  <span className="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-blue-500/20 text-blue-400 border border-blue-500/30">
+                  <span className="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-blue-50 text-blue-700 border border-blue-200">
                     AZN (₼)
                   </span>
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition">
+                  <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-700 transition">
                     Azerbaijan
                   </h3>
-                  <span className="text-xs text-slate-400">İslam Maliyyəsi & KOB</span>
+                  <span className="text-xs text-slate-500">İslam Maliyyəsi & KOB</span>
                 </div>
 
-                <p className="text-xs text-slate-300 leading-relaxed">
+                <p className="text-xs text-slate-600 leading-relaxed">
                   KOB Avadanlıq İcarəsi (₼100,000 / 36 ay), İcarə / AITAB structure, CBAR regulatory alignment, and business equipment lease.
                 </p>
               </div>
@@ -179,9 +179,9 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onEnterApp }) => {
       </div>
 
       {/* Footer */}
-      <footer className="border-t border-slate-900 bg-slate-950/60 py-6 text-center text-xs text-slate-500 space-y-2">
+      <footer className="border-t border-slate-200 bg-white/60 py-6 text-center text-xs text-slate-500 space-y-2">
         <p>© 2026 D8 Capital • Digital Islamic Financing Marketplace Prototype</p>
-        <p className="text-[11px] text-slate-600 max-w-2xl mx-auto px-4">
+        <p className="text-[11px] text-slate-500 max-w-2xl mx-auto px-4">
           All calculations, product rates, and provider materials are illustrative demo data for regulatory and management demonstration.
         </p>
       </footer>

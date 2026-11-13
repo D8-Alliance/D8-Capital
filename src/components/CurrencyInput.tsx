@@ -42,7 +42,7 @@ export const CurrencyInput: React.FC<CurrencyInputProps> = ({
   return (
     <div className={`relative rounded-xl shadow-inner ${className}`}>
       <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-        <span className="text-xs font-mono font-bold text-[#c4a67e] bg-[#c4a67e]/10 px-2 py-0.5 rounded border border-[#c4a67e]/30">
+        <span className="text-xs font-mono font-bold text-[#8a6a3a] bg-[#c4a67e]/10 px-2 py-0.5 rounded border border-[#c4a67e]/30">
           {config.currencySymbol}
         </span>
       </div>
@@ -57,7 +57,7 @@ export const CurrencyInput: React.FC<CurrencyInputProps> = ({
         value={value || ''}
         onChange={handleChange}
         placeholder={placeholder}
-        className="block w-full rounded-xl border border-white/10 bg-[#141414] py-2.5 pl-16 pr-4 text-sm font-mono font-medium text-white placeholder:text-white/30 focus:border-[#c4a67e] focus:ring-1 focus:ring-[#c4a67e]/30 focus:outline-none transition disabled:bg-white/5 disabled:text-white/30"
+        className="block w-full rounded-xl border border-slate-200 bg-stone-50 py-2.5 pl-16 pr-4 text-sm font-mono font-medium text-slate-900 placeholder:text-slate-400 focus:border-[#c4a67e] focus:ring-1 focus:ring-[#c4a67e]/30 focus:outline-none transition disabled:bg-slate-100 disabled:text-slate-400"
       />
     </div>
   );
