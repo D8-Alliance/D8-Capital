@@ -44,7 +44,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onEnterApp }) => {
       </div>
 
       {/* Main Hero Container */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 space-y-12">
+      <div className="w-full max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 py-12 lg:py-20 space-y-12">
         {/* Brand & Value Prop */}
         <div className="text-center max-w-3xl mx-auto space-y-5">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold shadow-lg">

@@ -23,7 +23,7 @@ export const SettingsPage: React.FC = () => {
   const countryConfig = COUNTRIES[state.activeCountry] || COUNTRIES.MY;
 
   return (
-    <div id="settings-page" className="max-w-4xl mx-auto space-y-8 animate-fadeIn pb-24">
+    <div id="settings-page" className="w-full space-y-8 animate-fadeIn pb-24">
       {/* Header */}
       <div>
         <div className="flex items-center gap-2">

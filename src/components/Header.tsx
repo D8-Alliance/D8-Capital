@@ -78,27 +78,27 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, onNavigate }) => {
 
   return (
     <header id="main-header" className="sticky top-0 z-30 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+      <div className="w-full mx-auto px-3 sm:px-6 lg:px-8 2xl:px-12">
+        <div className="flex items-center justify-between gap-2 h-14 sm:h-16">
           {/* Brand & Logo */}
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-3 lg:gap-6 min-w-0">
             <button
               onClick={() => onNavigate('dashboard')}
-              className="flex items-center gap-3 text-left group cursor-pointer"
+              className="flex items-center gap-2 sm:gap-3 text-left group cursor-pointer min-w-0"
             >
-              <div className="w-10 h-10 rounded-xl bg-stone-50 border border-[#c4a67e]/30 flex items-center justify-center text-[#8a6a3a] font-serif-luxury font-bold text-xl shadow-inner group-hover:border-[#c4a67e] group-hover:scale-105 transition">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 shrink-0 rounded-xl bg-stone-50 border border-[#c4a67e]/30 flex items-center justify-center text-[#8a6a3a] font-serif-luxury font-bold text-xl shadow-inner group-hover:border-[#c4a67e] group-hover:scale-105 transition">
                 D8
               </div>
               <div>
                 <div className="flex items-center gap-2">
-                  <span className="font-serif-luxury font-bold text-slate-900 tracking-tight text-xl">
+                  <span className="font-serif-luxury font-bold text-slate-900 tracking-tight text-lg sm:text-xl whitespace-nowrap">
                     D8 Capital
                   </span>
-                  <span className="text-[10px] uppercase font-mono font-bold tracking-widest bg-[#c4a67e]/15 text-[#8a6a3a] border border-[#c4a67e]/30 px-1.5 py-0.5 rounded">
+                  <span className="hidden sm:inline text-[10px] uppercase font-mono font-bold tracking-widest bg-[#c4a67e]/15 text-[#8a6a3a] border border-[#c4a67e]/30 px-1.5 py-0.5 rounded">
                     ISLAMIC
                   </span>
                 </div>
-                <span className="text-[10px] text-slate-500 tracking-widest uppercase font-medium block leading-none mt-0.5">
+                <span className="hidden sm:block text-[10px] text-slate-500 tracking-widest uppercase font-medium leading-none mt-0.5">
                   Private Wealth & Financing
                 </span>
               </div>
@@ -127,7 +127,7 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, onNavigate }) => {
           </div>
 
           {/* Right Controls: Country Selector, Language Selector, Notifications, Role Badge */}
-          <div className="flex items-center gap-2 sm:gap-3">
+          <div className="flex items-center gap-1 sm:gap-3 shrink-0">
             {/* Country Selector Dropdown */}
             <div className="relative">
               <button

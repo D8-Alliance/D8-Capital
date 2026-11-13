@@ -46,25 +46,25 @@ export const DemoControlBar: React.FC<DemoControlBarProps> = ({ onOpenFlowMap, o
     >
       {/* Mini Toggle Header when collapsed */}
       {isCollapsed ? (
-        <div className="px-4 py-2 flex items-center justify-between">
-          <div className="flex items-center gap-3 text-xs font-mono">
+        <div className="px-3 sm:px-4 py-2 flex items-center justify-between gap-2">
+          <div className="flex items-center gap-2 sm:gap-3 text-xs font-mono min-w-0 overflow-hidden whitespace-nowrap">
             <span className="flex items-center gap-1.5 font-bold text-[#8a6a3a]">
               <span className="w-1.5 h-1.5 rounded-full bg-[#c4a67e] animate-pulse"></span>
               DEMO CONTROL
             </span>
-            <span className="text-slate-300">|</span>
-            <span className="text-slate-700">{activeCountryConfig.flag} {activeCountryConfig.name}</span>
-            <span className="text-slate-300">|</span>
-            <span className="bg-slate-100 border border-slate-200 px-2 py-0.5 rounded text-[10px] text-slate-600">
+            <span className="hidden sm:inline text-slate-300">|</span>
+            <span className="hidden sm:inline text-slate-700">{activeCountryConfig.flag} {activeCountryConfig.name}</span>
+            <span className="hidden sm:inline text-slate-300">|</span>
+            <span className="hidden md:inline bg-slate-100 border border-slate-200 px-2 py-0.5 rounded text-[10px] text-slate-600">
               ROLE: {state.activeRole}
             </span>
           </div>
 
           <button
             onClick={() => setIsCollapsed(false)}
-            className="flex items-center gap-1 text-xs text-slate-500 hover:text-slate-900 bg-stone-50 px-2.5 py-1 rounded-lg border border-slate-200 transition cursor-pointer"
+            className="shrink-0 flex items-center gap-1 text-xs text-slate-500 hover:text-slate-900 bg-stone-50 px-2.5 py-1 rounded-lg border border-slate-200 transition cursor-pointer"
           >
-            <span>Expand Controls</span>
+            <span className="hidden sm:inline">Expand Controls</span>
             <ChevronUp className="w-3.5 h-3.5" />
           </button>
         </div>

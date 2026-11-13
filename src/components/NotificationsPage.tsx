@@ -28,7 +28,7 @@ export const NotificationsPage: React.FC<NotificationsPageProps> = ({ onNavigate
   };
 
   return (
-    <div id="notifications-page" className="max-w-3xl mx-auto space-y-6 animate-fadeIn pb-20">
+    <div id="notifications-page" className="w-full space-y-6 animate-fadeIn pb-20">
       <div className="flex items-center justify-between">
         <div>
           <div className="flex items-center gap-2">

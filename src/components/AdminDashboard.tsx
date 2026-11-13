@@ -57,7 +57,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ onNavigateTab })
       </div>
 
       {/* Cross-Border Platform KPIs */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
         <div
           onClick={() => onNavigateTab('countries')}
           className="p-5 bg-white rounded-3xl border border-slate-200 shadow-2xs space-y-1 hover:border-purple-300 transition cursor-pointer"

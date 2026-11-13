@@ -177,7 +177,7 @@ export const ApplicationWizard: React.FC<ApplicationWizardProps> = ({
   };
 
   return (
-    <div id="application-wizard" className="max-w-4xl mx-auto space-y-6 animate-fadeIn pb-24">
+    <div id="application-wizard" className="w-full space-y-6 animate-fadeIn pb-24">
       {/* Wizard Step Indicator */}
       <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-4">
         <div className="flex items-center justify-between">

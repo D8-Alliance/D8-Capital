@@ -74,7 +74,7 @@ export const ProviderDashboard: React.FC<ProviderDashboardProps> = ({
       </div>
 
       {/* KPI Stats Bento Grid */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
         <div className="p-5 bg-white rounded-3xl border border-slate-200 shadow-2xs space-y-1">
           <div className="flex items-center justify-between">
             <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">

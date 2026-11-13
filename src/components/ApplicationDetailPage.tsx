@@ -55,7 +55,7 @@ export const ApplicationDetailPage: React.FC<ApplicationDetailPageProps> = ({
   };
 
   return (
-    <div id="application-detail-page" className="max-w-5xl mx-auto space-y-6 animate-fadeIn pb-24">
+    <div id="application-detail-page" className="w-full space-y-6 animate-fadeIn pb-24">
       {/* Top Navigation */}
       <div className="flex items-center justify-between">
         <button

@@ -285,12 +285,12 @@ function MainAppContent() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f7f5f0] flex flex-col justify-between text-slate-800 selection:bg-[#c4a67e] selection:text-black">
+    <div className="min-h-screen w-full overflow-x-hidden bg-[#f7f5f0] flex flex-col justify-between text-slate-800 selection:bg-[#c4a67e] selection:text-black">
       {/* Header */}
       <Header activeTab={activeTab} onNavigate={handleNavigate} />
 
       {/* Main Container */}
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+      <main className="flex-1 w-full min-w-0 mx-auto px-3 sm:px-6 lg:px-8 2xl:px-12 py-4 sm:py-6 lg:py-8">
         {renderCurrentView()}
       </main>
 
